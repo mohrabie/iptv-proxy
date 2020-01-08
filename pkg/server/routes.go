@@ -33,6 +33,8 @@ func (c *Config) routes(r *gin.RouterGroup) {
 func (c *Config) xtreamRoutes(r *gin.RouterGroup) {
 	r.GET("/get.php", c.authenticate, c.xtreamGet)
 	r.POST("/get.php", c.authenticate, c.xtreamGet)
+	r.GET("/panel_api.php", c.authenticate, c.xtreamGet)
+	r.POST("/panel_api.php", c.authenticate, c.xtreamGet)
 	r.GET("/player_api.php", c.authenticate, c.xtreamPlayerAPIGET)
 	r.POST("/player_api.php", c.appAuthenticate, c.xtreamPlayerAPIPOST)
 	r.GET("/xmltv.php", c.authenticate, c.xtreamXMLTV)
